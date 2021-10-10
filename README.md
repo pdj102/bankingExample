@@ -4,11 +4,11 @@ The ZX Spectrum z80 processor can only directly address 64k of memory but the ZX
  
 The ZX Spectrum Next physical memory is split into banks that can be mapped into the directly addressable memory by the Memory Management Unit (MMU). 
  
-The Next supports two bank sizes, the classic 16K bank scheme and the Next specific 8K bank scheme. In the Next scheme each classic 16k bank is subdivided into two 8k banks.
+The Next supports two bank sizes, the classic 16K bank scheme and the Next specific 8K bank scheme. In the Next scheme each classic 16k bank is subdivided into two 8k banks and is much more flexible and supports more physcial memory.
 
-## Classic 16k banking scheme
+## Classic ZX Spectrum 16k banking scheme
 
-The spectrum 128 classic banking scheme divides the visible 64K address space into 4 * 16K slots. By default banks are mapped into the slots as follows
+The ZX Spectrum 128 classic banking scheme divides the visible 64K address space into 4 * 16K slots. By default banks are mapped into the slots as follows
  * slot 1 (0x000)     contains the ROM 
  * slot 2 (0x4000)    contains BANK 5 (normally used for the ULA screen)
  * slot 3 (0x8000)    contains BANK 2 (free RAM)
