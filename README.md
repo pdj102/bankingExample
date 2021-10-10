@@ -31,7 +31,7 @@ In addition, in 8k-slots 0 and 1 only, the ROM can be paged in by selecting the 
 ## Placing C code in a specific bank
 
 To place C code into a specific bank you need to 
-* set the ORG address for slot the bank will be paged into 
+* set the ORG address for the slot you will map the bank into
 * tell the compiler to compile the code into the correct bank (physical memory location)
 * move the stack out of harms way - ensure the stack is not located in memory to be banked out 
 * manually map the bank into memory before calling the C code in the bank 
