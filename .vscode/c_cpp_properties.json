@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}",
+                "C:/Users/pdj10/Documents/_PROGRAMMING/z88dk/include"
+            ],
+            "compilerPath": "C:\\Users\\pdj10\\Documents\\_PROGRAMMING\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
