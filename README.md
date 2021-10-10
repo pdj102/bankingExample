@@ -18,7 +18,7 @@ In the classic 128K spectrum style banking scheme the MMU can only alter the 16k
 
 ## Next 8k banking scheme
 
-The Next 8k banking scheme divides the addresable 64K address space into 8 * 8k slots. 
+The Next 8k banking scheme divides the addressable 64K address space into 8 * 8k slots. 
 
 The Next banking 8k scheme is much more flexible than the classic scheme and can map any bank into any 8k slot. It also supports much bigger physcial memory sizes ie. 1 or 2Mb instead of 128K.  
 
