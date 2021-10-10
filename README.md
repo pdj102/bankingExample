@@ -52,20 +52,31 @@ The 8k-bank accessed in an 8k-slot is selected by writing the 8k-bank number to 
  Examples of how to page a bank into memory.
   
  Classic 128k - page 16k bank 1 into slot 4 (0xc00)
+ 
  #include <z80.h>
+ 
  z80_outp(0x7ffd, 1);
+ 
   
  ZXN - page 8k bank 2 into slot 6 (0xc00)
+ 
  ZXN_WRITE_REG(0x56, 2);
+ 
  ZXN_WRITE_MMU6(2);
+ 
  Remember 8k banks numbers are 2x and 2x+1 the 16k bank number e.g. 16k bank 1 = 8k banks 2 & 3
   
   
  To compile the example
  zcc +zxn -vn -c -SO3 -compiler sdcc -clib=sdcc_iy -pragma-include:zpragma.inc -o bank_test.o bank_test.c
+ 
  zcc +zxn -vn -c -SO3 -compiler sdcc -clib=sdcc_iy  --codesegBANK_0 --constsegBANK_0 -o bank_test_0.o bank_test_0.c
+ 
  zcc +zxn -vn -c -SO3 -compiler sdcc -clib=sdcc_iy  --codesegBANK_1_L --constsegBANK_1_L -o bank_test_1.o bank_test_1.c
+ 
  zcc +zxn -vn -c -SO3 -compiler sdcc -clib=sdcc_iy  --codesegBANK_1 --constsegBANK_1 -o bank_test_1.o bank_test_1.c
+ 
  zcc +zxn -vn -clib=sdcc_iy  -startup=1 bank_test.o bank_test_0.o bank_test_1.o -pragma-include:zpragma.inc -o bank_test.nex -create-app -subtype=nex
+ 
   
  NB bank 0 is merged into the main memory bank as the main memory bank includes 5, 2, 0 by default
