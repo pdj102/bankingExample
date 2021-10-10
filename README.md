@@ -58,11 +58,13 @@ The 8k-bank accessed in an 8k-slot is selected by writing the 8k-bank number to 
  z80_outp(0x7ffd, 1);
  
   
+  
  ZXN - page 8k bank 2 into slot 6 (0xc00)
  
- ZXN_WRITE_REG(0x56, 2);
+ ZXN_WRITE_REG(0x56, 2); or
  
  ZXN_WRITE_MMU6(2);
+ 
  
  Remember 8k banks numbers are 2x and 2x+1 the 16k bank number e.g. 16k bank 1 = 8k banks 2 & 3
   
