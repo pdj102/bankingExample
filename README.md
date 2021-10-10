@@ -4,7 +4,7 @@
  
  The Next supports two bank sizes.
  The classic 16K bank scheme and the Next specific 8K bank scheme.
- In the Next scheme each 16k bank is subdivided into two 8k banks.
+ In the Next scheme each classic 16k bank is subdivided into two 8k banks.
  
  The ZX Spectrum z80 processor can only address 64k. 
  
@@ -18,7 +18,7 @@
  The classic 128K spectrum style banking scheme can only alter the 16k bank mapped into slot 4 (0xc000).
  Banks 0, 1, 2, 3, 4, 5, 7 can be mapped into slot 4.
   
- For the Next 8k banking scheme the visible 64K address spaces is split into 8 * 8k slotes.
+ For the Next 8k banking scheme the visible 64K address spaces is split into 8 * 8k slots.
  By default these slots mirror the classic scheme and the bank numbers are based on the 8k sizes .
  For example 16k slot 2 contains 8k banks 10 and 11.
   
