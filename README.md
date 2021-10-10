@@ -36,7 +36,8 @@
  For example #pragma output CRT_ORG_CODE = 0xC000
  This applies to the scope of the file
   
- To compile the code into the correcty bank use the --codeseg and --constseg options e.g. to compile code into a specified bank
+ To compile the code into the correct bank use the --codeseg and --constseg options to specify the bank.
+ 
  ZXN banks are named as BANK_0 (16k) BANK_0_L (8k) BANK_0_H (8k) BANK_1 (16k) etc
  See https://github.com/z88dk/z88dk/blob/0cb51ee64b02bfc08645026dd141f671c0de6dc9/lib/target/zxn/classic/memory_map.asm
  For example to complile to 16k bank 0 zcc +zxn -vn -c -SO3 -compiler sdcc -clib=sdcc_iy  --codesegBANK_0 --constsegBANK_0 -o ./obj/bank_test_0.o src/bank_test_0.c
